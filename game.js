@@ -4,7 +4,6 @@ let game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create
 function preload() {
 
 
-    game.scale.scaleMode = Phaser.ScaleManager.RESIZE;
     game.scale.pageAlignHorizontally = true;
     game.scale.pageAlignVertically = true;
 
