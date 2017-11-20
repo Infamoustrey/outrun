@@ -2,9 +2,6 @@
 A game for the itch.io Game off November Game Jame
 
 
-----------
-
-
 ###Credits
 I used assets from the following creators without whom I could not have made this game.
 
