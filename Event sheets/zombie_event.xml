@@ -7,11 +7,7 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="301872764319460" type="System" />
             </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="196362688585846" type="zombie">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <event-block sid="228733351670648">
                     <conditions>
@@ -23,34 +19,6 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="833231569735032" type="zombie" />
-                    </actions>
-                </event-block>
-                <event-block sid="963243157432450">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="922553332588126" type="zombie">
-                            <param id="0" name="Instance variable">direction</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="386536645115626" type="zombie">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="877411639936891">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="671669224375500" type="zombie">
-                            <param id="0" name="Instance variable">direction</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="702386706212516" type="zombie">
-                            <param id="0" name="State">1</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="847244270902343">
@@ -86,6 +54,40 @@
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="800504847311365" type="zombie">
                             <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="192437847130608">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="855791189324463" type="System">
+                            <param id="0" name="First value">player.X</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">zombie.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="136737696658256" type="zombie">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="100912951193696" type="zombie">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="464325582360293">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="789649227886129" type="System">
+                            <param id="0" name="First value">player.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">zombie.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="656419678683151" type="zombie">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="158926717512635" type="zombie">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
