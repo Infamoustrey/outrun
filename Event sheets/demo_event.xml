@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>demo_event</name>
+    <events>
+        <include>zombie_event</include>
+        <include>bullet_event</include>
+        <include>player_event</include>
+        <event-block sid="736342036386805">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="328636131610080" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Play (by name)" sid="296925956153814" type="Audio">
+                    <param id="0" name="Folder">1</param>
+                    <param id="1" name="Audio file name">&quot;roller_mobster&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="10" name="Set master volume" sid="439260197350608" type="Audio">
+                    <param id="0" name="dB">-25</param>
+                </action>
+                <action id="23" name="Seek to" sid="441380675496414" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Position">39</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>zombie_event</name>
+    <events>
+        <event-block sid="225888218352926">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="301872764319460" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="196362688585846" type="zombie">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="228733351670648">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="301577264875475" type="zombie">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="833231569735032" type="zombie" />
+                    </actions>
+                </event-block>
+                <event-block sid="963243157432450">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="922553332588126" type="zombie">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="386536645115626" type="zombie">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="877411639936891">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="671669224375500" type="zombie">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="702386706212516" type="zombie">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="847244270902343">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="396366966194875" type="zombie" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="827478025473396" type="zombie">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="686905683196425">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="182401408787387" type="zombie" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="963287558382128" type="zombie">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="340567236501997">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="325109712150664" type="System">
+                            <param id="0" name="First value">5</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">round(random(1,10))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="800504847311365" type="zombie">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

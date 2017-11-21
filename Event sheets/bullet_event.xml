@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>bullet_event</name>
+    <events>
+        <event-block sid="471720836778250">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="403090191596274" type="bullet">
+                    <param id="0" name="Object">zombie</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="727886357079849" type="zombie">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="798634274898188" type="bullet" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
