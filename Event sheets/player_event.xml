@@ -3,12 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>player_event</name>
     <events>
+        <variable constant="0" name="player_death" sid="579408871297741" static="0" type="number">0</variable>
         <variable constant="0" name="player_shooting" sid="971828191161913" static="0" type="number">0</variable>
         <variable constant="0" name="player_direction" sid="612973568921298" static="0" type="number">1</variable>
         <event-block sid="438675264631975">
             <conditions>
                 <condition id="2" name="Key is down" sid="652275285266213" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="103389072912100" type="System">
+                    <param id="0" name="Variable">player_death</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -30,6 +36,11 @@
                 <condition id="2" name="Key is down" sid="147231703054086" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="139178715304081" type="System">
+                    <param id="0" name="Variable">player_death</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="885494219966162" type="System">
@@ -49,6 +60,11 @@
             <conditions>
                 <condition id="2" name="Key is down" sid="374491605878598" type="Keyboard">
                     <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="546483236942112" type="System">
+                    <param id="0" name="Variable">player_death</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -72,6 +88,11 @@
                 <condition id="2" inverted="1" name="Key is down" sid="960768427067032" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="769641120730296" type="System">
+                    <param id="0" name="Variable">player_death</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="890804506021431" type="player">
@@ -88,6 +109,11 @@
             <conditions>
                 <condition id="2" inverted="1" name="Mouse button is down" sid="889668402803427" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="517685034121614" type="System">
+                    <param id="0" name="Variable">player_death</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -110,6 +136,11 @@
                 </condition>
                 <condition id="2" inverted="1" name="Mouse button is down" sid="100015390197952" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="638485069051421" type="System">
+                    <param id="0" name="Variable">player_death</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -150,6 +181,76 @@
                     <actions>
                         <action id="7" name="Set mirrored" sid="554319243449290" type="player">
                             <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="204465319954630">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="952060836033770" type="player">
+                            <param id="0" name="Object">zombie</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="171504311454540" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="507455683561353">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="777323991868667" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="215145261539039" type="System">
+                            <param id="0" name="Variable">player_death</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="376591716117220" type="System">
+                            <param id="0" name="Variable">player_death</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="105466023108279" type="Audio" />
+                        <action id="0" name="Play" sid="753731913856823" type="Audio">
+                            <param id="0" name="Audio file">hurt</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">30</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="952161379655578" type="player">
+                            <param id="0" name="Animation">&quot;death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="757462256065215" type="zombie">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="2" name="Stop" sid="202016409852650" type="zombie" />
+                        <action id="-16" name="Set opacity" sid="601976603300171" type="zombie">
+                            <param id="0" name="Opacity">70</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="989566370556755" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="311875234131233" type="background">
+                            <param id="0" name="Opacity">70</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="383120075704073" type="player">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="893386913882771" type="Audio">
+                            <param id="0" name="Audio file">Courage</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">30</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="23" name="Seek to" sid="850938265376499" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Position">92.7</param>
                         </action>
                     </actions>
                 </event-block>

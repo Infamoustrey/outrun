@@ -15,7 +15,7 @@
     <layers>
         <layer name="Background" sid="667568207840316">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>0,0,0</background-color>
             <transparent>1</transparent>
             <parallax>
                 <x>1</x>
@@ -107,7 +107,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <health>100</health>
+                        <health>3</health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -222,11 +222,57 @@
                         <x>921</x>
                         <y>-96</y>
                         <z>0</z>
-                        <width>136</width>
-                        <height>160</height>
+                        <width>68</width>
+                        <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0.470588237</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="UI" sid="768260091200850">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="death_text" uid="12">
+                    <properties>
+                        <text>You Died</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Munro,-96,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>282</x>
+                        <y>-124</y>
+                        <z>0</z>
+                        <width>368</width>
+                        <height>107</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

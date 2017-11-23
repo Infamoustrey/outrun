@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ui_event</name>
+    <events>
+        <event-block sid="500327424794401">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="874916436750974" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="287399876398817">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="846659650883242" type="System">
+                            <param id="0" name="Variable">player_death</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="225151533272959" type="death_text">
+                            <param id="0" name="X">ViewportLeft(2)+(WindowWidth/4)-(death_text.Width/4)</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="215096143213028" type="death_text">
+                            <param id="0" name="Y">ViewportTop(2)+(WindowHeight/4)-(death_text.Height/4)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

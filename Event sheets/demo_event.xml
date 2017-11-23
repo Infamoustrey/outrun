@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>demo_event</name>
     <events>
+        <include>ui_event</include>
         <include>zombie_event</include>
         <include>bullet_event</include>
         <include>player_event</include>
@@ -15,11 +16,11 @@
                     <param id="0" name="Folder">1</param>
                     <param id="1" name="Audio file name">&quot;roller_mobster&quot;</param>
                     <param id="3" name="Loop">0</param>
-                    <param id="4" name="Volume">0</param>
+                    <param id="4" name="Volume">-20</param>
                     <param id="2" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="10" name="Set master volume" sid="439260197350608" type="Audio">
-                    <param id="0" name="dB">-25</param>
+                    <param id="0" name="dB">-10</param>
                 </action>
                 <action id="23" name="Seek to" sid="441380675496414" type="Audio">
                     <param id="0" name="Tag">&quot;&quot;</param>
