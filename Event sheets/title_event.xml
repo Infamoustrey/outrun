@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>title_event</name>
+    <events>
+        <event-block sid="306166317737485">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="420153435966046" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="346133449677346" type="canvas">
+                    <param id="0" name="Opacity">canvas.Opacity-0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="865081984736305">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="862314354695690" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="610067758190988" type="Audio">
+                    <param id="0" name="Audio file">redline</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="130624492670772">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="624677929530878" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">start_link</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="969713328012808" type="Audio" />
+                <action id="-2" name="Go to layout" sid="179559167849910" type="System">
+                    <param id="0" name="Layout">demo_layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="220736509785159">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="709331479652642" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">github_link</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="451665171112545" type="Browser">
+                    <param id="0" name="URL">&quot;http://github.com/infamoustrey&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

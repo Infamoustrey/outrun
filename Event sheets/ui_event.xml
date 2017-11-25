@@ -3,6 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ui_event</name>
     <events>
+        <event-block sid="322366688048433">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="733348168580348" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="770676611804799" type="death_text">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="500327424794401">
             <conditions>
                 <condition id="-1" name="Every tick" sid="874916436750974" type="System" />
@@ -19,14 +29,45 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="225151533272959" type="death_text">
-                            <param id="0" name="X">ViewportLeft(2)+(WindowWidth/4)-(death_text.Width/4)</param>
+                            <param id="0" name="X">400-death_text.Width/2</param>
                         </action>
                         <action id="-2" name="Set Y" sid="215096143213028" type="death_text">
-                            <param id="0" name="Y">ViewportTop(2)+(WindowHeight/4)-(death_text.Height/4)</param>
+                            <param id="0" name="Y">300-death_text.Height/2</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="657306532870041" type="death_text">
+                            <param id="0" name="Opacity">death_text.Opacity+1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="509043099031477">
+                            <conditions>
+                                <condition id="-10" name="Compare opacity" sid="822417864899961" type="death_text">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="729445694988645" type="start_over">
+                                    <param id="0" name="X">death_text.X+(death_text.Width/2)-(start_over.Width/2)</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="770076819674648" type="start_over">
+                                    <param id="0" name="Y">death_text.Y+(death_text.Height/2)+(start_over.Height)+50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="900434110665491">
+            <conditions>
+                <condition id="0" name="On clicked" sid="657581533227205" type="start_over" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="208406879516872" type="System" />
+                <action id="33" name="Stop all" sid="939647167398515" type="Audio" />
+                <action id="-26" name="Restart layout" sid="481657723755075" type="System" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

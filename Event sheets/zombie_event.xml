@@ -69,6 +69,9 @@
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Second value">zombie.X</param>
                         </condition>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="608455545719420" type="zombie">
+                            <param id="0" name="Object">player</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="136737696658256" type="zombie">
@@ -85,6 +88,9 @@
                             <param id="0" name="First value">player.X</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">zombie.X</param>
+                        </condition>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="104501060530927" type="zombie">
+                            <param id="0" name="Object">player</param>
                         </condition>
                     </conditions>
                     <actions>

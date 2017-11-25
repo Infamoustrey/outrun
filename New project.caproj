@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -23,6 +24,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -414,6 +416,9 @@
                 <behavior-type name="Solid" sid="632290568919579">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="LineOfSight" sid="531733271700467">
+                    <behavior id="LOS" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="3" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="342524192966501" speed="5">
@@ -463,10 +468,57 @@
         <object-type name="death_text" sid="723963384782880">
             <plugin id="Text" />
         </object-type>
+        <object-type name="start_over" sid="754815848574294">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Text2" sid="229750774929459">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite2" sid="459170481017489">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849769624259613" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\treyb\Downloads\pMPkY6d.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="start_link" sid="310771437387965">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156342824772945" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="credits_link" sid="838179924547785">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="469114384313216" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="github_link" sid="878099360365289">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802146618097357" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="canvas" sid="582177778431341">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119360755381017" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>demo_layout.xml</layout>
+        <layout>title_layout.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>demo_event.xml</event-sheet>
@@ -474,6 +526,7 @@
         <event-sheet>bullet_event.xml</event-sheet>
         <event-sheet>zombie_event.xml</event-sheet>
         <event-sheet>ui_event.xml</event-sheet>
+        <event-sheet>title_event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
@@ -511,6 +564,7 @@
     <music-folder>
         <file name="roller_mobster.ogg" />
         <file name="Courage.ogg" />
+        <file name="redline.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
