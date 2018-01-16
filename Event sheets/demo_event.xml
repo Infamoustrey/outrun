@@ -26,6 +26,22 @@
                     <param id="0" name="Tag">&quot;&quot;</param>
                     <param id="1" name="Position">39</param>
                 </action>
+                <action id="5" name="Set CSS style" sid="960833333768315" type="start_over">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;red&quot;</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="564100272051650" type="start_over">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;white&quot;</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="710415434659160" type="start_over">
+                    <param id="0" name="Property name">&quot;border-radius&quot;</param>
+                    <param id="1" name="Value">&quot;5px&quot;</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="658776052334662" type="start_over">
+                    <param id="0" name="Property name">&quot;border-color&quot;</param>
+                    <param id="1" name="Value">&quot;red&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

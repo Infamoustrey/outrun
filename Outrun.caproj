@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Outrun</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>800</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackground" sid="3206956448522659">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="WebStorage" sid="1510269620771624">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Text" sid="2985603725420557">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="825592517485764">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="221824117597486">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="664747017456983" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player" sid="693312608512262">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="932342756878806" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="930429059415316">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="436002703859927">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="286595039144641">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="101317577555471" speed="5">
+                    <frame duration="1" hotspotX="0.4" hotspotY="0.931579" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.481481" hotspotY="0.926316" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0.210526" />
+                            <point x="1" y="0.236842" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.496296" hotspotY="0.940541" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0.189189" />
+                            <point x="1" y="0.216216" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.433333" hotspotY="0.95" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0.166667" />
+                            <point x="1" y="0.194444" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.416667" hotspotY="0.926316" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0.210526" />
+                            <point x="1" y="0.236842" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="0" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="366921477542087" speed="12">
+                    <frame duration="1" hotspotX="0.416" hotspotY="0.940541" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0.4" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.459459" />
+                            <point x="1" y="1" />
+                            <point x="0.32" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.496296" hotspotY="0.937143" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.458333" hotspotY="0.933333" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.444444" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.486667" hotspotY="0.925714" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.428571" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5125" hotspotY="0.933333" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.444444" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475862" hotspotY="0.922222" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.444444" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.481481" hotspotY="0.927778" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.419335" />
+                            <point x="0.64403" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.492308" hotspotY="0.918919" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.615385" y="0.459459" />
+                            <point x="0" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="439361263387652" speed="5">
+                    <frame duration="1" hotspotX="0.48125" hotspotY="0.89375" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.206221" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="shooting" pingpong="0" repeatcount="1" repeatto="0" sid="922309455211054" speed="36">
+                    <frame duration="1" hotspotX="0.355556" hotspotY="0.925714" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <image-point name="barrel" x="0.992593" y="0.217143" />
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.44" hotspotY="0.931429">
+                        <image-point name="barrel" x="0.993333" y="0.205714" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.466667" hotspotY="0.925714">
+                        <image-point name="barrel" x="0.98" y="0.188571" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.413793" hotspotY="0.925714">
+                        <image-point name="barrel" x="0.97931" y="0.211429" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.378571" hotspotY="0.931429" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Spritesheet\Ellie spritesheet.png">
+                        <image-point name="barrel" x="0.992857" y="0.211429" />
+                        <collision-poly>
+                            <point x="0.0357143" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="8" loop="0" name="death" pingpong="0" repeatcount="1" repeatto="0" sid="334432028338019" speed="9">
+                    <frame duration="1" hotspotX="0.434426" hotspotY="0.927083" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Frames\Ellie frame_death_0.png">
+                        <collision-poly>
+                            <point x="0.0491803" y="0.213542" />
+                            <point x="0.459016" y="0.00520833" />
+                            <point x="0.622951" y="0.369792" />
+                            <point x="0.909836" y="0.473958" />
+                            <point x="0.622951" y="0.578125" />
+                            <point x="0.459016" y="0.65625" />
+                            <point x="0.213115" y="0.630208" />
+                            <point x="0.295082" y="0.473958" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.547445" hotspotY="0.943503" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Frames\Ellie frame_death_1.png">
+                        <collision-poly>
+                            <point x="0.116788" y="0.146893" />
+                            <point x="0.481752" y="0.00564972" />
+                            <point x="0.591241" y="0.344633" />
+                            <point x="0.664234" y="0.429379" />
+                            <point x="0.846715" y="0.711864" />
+                            <point x="0.481752" y="0.909605" />
+                            <point x="0.080292" y="0.740113" />
+                            <point x="0.226277" y="0.429379" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.492424" hotspotY="0.929936" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Frames\Ellie frame_death_2.png">
+                        <collision-poly>
+                            <point x="0.19697" y="0.133758" />
+                            <point x="0.462121" y="0.00636943" />
+                            <point x="0.80303" y="0.356688" />
+                            <point x="0.80303" y="0.643312" />
+                            <point x="0.462121" y="0.898089" />
+                            <point x="0.00757576" y="0.738854" />
+                            <point x="0.310606" y="0.356688" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.489796" hotspotY="0.883212" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Frames\Ellie frame_death_3.png">
+                        <collision-poly>
+                            <point x="0.44898" y="0.29927" />
+                            <point x="0.414966" y="0.627737" />
+                            <point x="0.55102" y="0.116788" />
+                            <point x="0.823129" y="0.262774" />
+                            <point x="0.92517" y="0.810219" />
+                            <point x="0.414966" y="0.883212" />
+                            <point x="0.517007" y="0.153285" />
+                            <point x="0.55102" y="0.262774" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.475309" hotspotY="0.897196" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Frames\Ellie frame_death_4.png">
+                        <collision-poly>
+                            <point x="0.407407" y="0.149533" />
+                            <point x="0.376543" y="0.570093" />
+                            <point x="0.5" y="0" />
+                            <point x="0.746914" y="0.102804" />
+                            <point x="0.839506" y="0.803738" />
+                            <point x="0.376543" y="0.897196" />
+                            <point x="0.469136" y="0" />
+                            <point x="0.5" y="0.102804" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.467066" hotspotY="0.819444" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Frames\Ellie frame_death_5.png">
+                        <collision-poly>
+                            <point x="0.724551" y="0.430556" />
+                            <point x="0.365269" y="0.569444" />
+                            <point x="0.874251" y="0.777778" />
+                            <point x="0.365269" y="0.777778" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.491018" hotspotY="0.77193" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Frames\Ellie frame_death_6.png">
+                        <collision-poly>
+                            <point x="0.724551" y="0.280702" />
+                            <point x="0.365269" y="0.45614" />
+                            <point x="0.874251" y="0.719298" />
+                            <point x="0.365269" y="0.719298" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.449102" hotspotY="0.659574" original-source="C:\Users\treyb\Downloads\Ellie Sprite sheet\Frames\Ellie frame_death_7.png">
+                        <collision-poly>
+                            <point x="0.724551" y="0.12766" />
+                            <point x="0.365269" y="0.340426" />
+                            <point x="0.874251" y="0.659574" />
+                            <point x="0.365269" y="0.659574" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="background" sid="155880665047481">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337384080986440" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\treyb\Downloads\cyberpunk-street-files\PNG\cyberpunk-street.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bullet" sid="829933793074556">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="660508287408020">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="696874709999210">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426120003923973" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="popup_exclamation" sid="837667662980591">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="287600022080952" speed="5">
+                    <frame duration="1" hotspotX="3" hotspotY="6.5" original-source="C:\Users\treyb\Downloads\emoticons.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="1" y="0.0625" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="1" y="1" />
+                            <point x="0.1875" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zombie" sid="323227259987964">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="477817354603234" type="number" />
+                <instance-variable name="direction" sid="774962894490097" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="399461805676972">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="632290568919579">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="531733271700467">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="342524192966501" speed="5">
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.5" original-source="C:\Users\treyb\Downloads\zombie\rogue like idle.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.758334" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.758334" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.526316" original-source="C:\Users\treyb\Downloads\zombie\rogue like idle.png">
+                        <collision-poly>
+                            <point x="0" y="0.263158" />
+                            <point x="0.470588" y="0.0526316" />
+                            <point x="1" y="0.315789" />
+                            <point x="1" y="0.526316" />
+                            <point x="1" y="0.789474" />
+                            <point x="0.470588" y="1" />
+                            <point x="0" y="0.789474" />
+                            <point x="0" y="0.526316" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.5" />
+                </animation>
+                <animation framecount="6" loop="0" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="910968191106984" speed="7">
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.5" original-source="C:\Users\treyb\Downloads\zombie\rogue like run.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.3" />
+                            <point x="1" y="0.35" />
+                            <point x="1" y="0.55" />
+                            <point x="1" y="0.8" />
+                            <point x="0.176471" y="0.8" />
+                            <point x="0.0588235" y="0.55" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.444444" hotspotY="0.526316" />
+                    <frame duration="1" hotspotX="0.444444" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="death_text" sid="723963384782880">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="start_over" sid="754815848574294">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Text2" sid="229750774929459">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite2" sid="459170481017489">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849769624259613" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\treyb\Downloads\pMPkY6d.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="start_link" sid="310771437387965">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156342824772945" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="credits_link" sid="838179924547785">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="469114384313216" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="github_link" sid="878099360365289">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802146618097357" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="canvas" sid="582177778431341">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119360755381017" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="health" sid="357358679017573">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="1" name="hearts3" pingpong="0" repeatcount="1" repeatto="0" sid="829521746365853" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\treyb\Downloads\pixel-hearts.png">
+                        <collision-poly>
+                            <point x="0.0447368" y="0.137097" />
+                            <point x="0.957895" y="0.129032" />
+                            <point x="0.978947" y="0.5" />
+                            <point x="0.915789" y="0.741935" />
+                            <point x="0.5" y="0.991935" />
+                            <point x="0.0868421" y="0.733871" />
+                            <point x="0.0236842" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="1" name="hearts2" pingpong="0" repeatcount="1" repeatto="0" sid="880796971520742" speed="5">
+                    <frame duration="1" hotspotX="0.368421" hotspotY="2.03226" />
+                </animation>
+                <animation framecount="1" loop="1" name="hearts1" pingpong="0" repeatcount="1" repeatto="0" sid="412325858248145" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1.00806" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>demo_layout.xml</layout>
+        <layout>title_layout.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>demo_event.xml</event-sheet>
+        <event-sheet>player_event.xml</event-sheet>
+        <event-sheet>bullet_event.xml</event-sheet>
+        <event-sheet>zombie_event.xml</event-sheet>
+        <event-sheet>ui_event.xml</event-sheet>
+        <event-sheet>title_event.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="WebStorage" uid="1" />
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+    </global-instances>
+    <sounds-folder>
+        <file name="hurt.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="roller_mobster.ogg" />
+        <file name="Courage.ogg" />
+        <file name="redline.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

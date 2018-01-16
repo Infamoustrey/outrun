@@ -104,5 +104,35 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="212435971377528">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="536520128368948" type="player">
+                    <param id="0" name="Object">zombie</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="269613052842447">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="687812721367076" type="zombie" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="938768727711274" type="zombie">
+                            <param id="0" name="Distance">40</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="160550822502663">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="144257992437473" type="zombie" />
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="798177390890957" type="zombie">
+                            <param id="0" name="Distance">-40</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

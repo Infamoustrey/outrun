@@ -196,6 +196,28 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="937508712175314">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="972823676772007" type="player" />
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Move forward" sid="527860546985909" type="player">
+                                    <param id="0" name="Distance">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="857956135920164">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="390089082853640" type="player" />
+                            </conditions>
+                            <actions>
+                                <action id="-17" name="Move forward" sid="799721507225449" type="player">
+                                    <param id="0" name="Distance">-40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="507455683561353">
                     <conditions>
@@ -251,6 +273,51 @@
                         <action id="23" name="Seek to" sid="850938265376499" type="Audio">
                             <param id="0" name="Tag">&quot;&quot;</param>
                             <param id="1" name="Position">92.7</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="160578322399479">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="440122251979940" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="485920031428262" type="health">
+                            <param id="0" name="Animation">&quot;hearts3&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="463350439226252">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="536759142174511" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="982924483892049" type="health">
+                            <param id="0" name="Animation">&quot;hearts2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="742921679273329">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="305741336418250" type="player">
+                            <param id="0" name="Instance variable">health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="484219099864994" type="health">
+                            <param id="0" name="Animation">&quot;hearts1&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
